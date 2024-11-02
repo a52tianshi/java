@@ -7,7 +7,7 @@ public class CharDisplay extends AbstractDisplay {
         this.ch = ch;
     }
 
-    public void open() {
+    protected void open() {
         System.out.print("<<");
     }
     public void print() {

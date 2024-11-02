@@ -11,7 +11,7 @@ public class StringDisplay extends AbstractDisplay {
         this.width = str.getBytes().length;
     }
 
-    public void open() {
+    protected void open() {
         printLine();
     }
     public void print() {
