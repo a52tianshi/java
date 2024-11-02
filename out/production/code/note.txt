@@ -1,4 +1,0 @@
-java -cp ".;commons-logging-1.3.4.jar" Main
-
-
-power shell 要加 ""
