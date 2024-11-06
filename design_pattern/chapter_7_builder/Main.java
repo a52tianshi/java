@@ -1,7 +1,19 @@
 package design_pattern.chapter_7_builder;
 
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
+        if (args.length != 999) {
+            FrameBuilder framebuilder = new FrameBuilder();
+            Director director = new Director(framebuilder);
+            director.construct();
+            JFrame frame = framebuilder.getResult();
+            frame.setVisible(true);
+            return;
+        }
+
+
         if (args.length != 1) {
             usage();
             System.exit(0);

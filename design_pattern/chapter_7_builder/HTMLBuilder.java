@@ -1,6 +1,6 @@
 package design_pattern.chapter_7_builder;
 
-public class HTMLBuilder extends Builder {
+public class HTMLBuilder implements Builder {
     private String filename;
     private java.io.PrintWriter writer;
 
