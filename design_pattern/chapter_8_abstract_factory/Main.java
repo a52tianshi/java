@@ -2,6 +2,14 @@ package design_pattern.chapter_8_abstract_factory;
 import design_pattern.chapter_8_abstract_factory.factory.*;
 public class Main {
     public static void main(String[] args) {
+        //exercise 8.2
+        if (args.length == 0) {
+            Factory listFactory = Factory.getFactory("design_pattern.chapter_8_abstract_factory.list_factory.ListFactory");
+            Page listPage = listFactory.createYahooPage();
+            listPage.output();
+            return;
+        }
+
         if (args.length != 1) {
             System.out.println("Usage: java Main class.name.of.ConcreteFactory");
             System.out.println("Example 1: java Main design_pattern.chapter_8_abstract_factory.listfactory.ListFactory");
