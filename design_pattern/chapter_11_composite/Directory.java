@@ -26,6 +26,7 @@ public class Directory extends Entry{
     }
 
     public Entry add(Entry entry) {
+        entry.parent = this;
         directory.add(entry);
         return this;
     }

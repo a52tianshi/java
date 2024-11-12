@@ -8,12 +8,16 @@ public class Main {
             Directory bindir = new Directory("bin");
             Directory tmpdir = new Directory("tmp");
             Directory usrdir = new Directory("usr");
+            //cq add
+            System.out.println("usrdir.getFullPathName() = " + usrdir.getFullPathName());
             rootdir.add(bindir);
             rootdir.add(tmpdir);
             rootdir.add(usrdir);
             bindir.add(new File("vi", 10000));
             bindir.add(new File("latex", 20000));
             rootdir.printList();
+            //cq add
+            System.out.println("usrdir.getFullPathName() = " + usrdir.getFullPathName());
 
             System.out.println("");
             System.out.println("Making user entries...");
@@ -33,4 +37,7 @@ public class Main {
             e.printStackTrace();
         }
     }
+    // 习题 11-1
+    // 1. 除了文件系统之外，还有哪些地方可以应用组合模式？
+    // 答：可以应用在组织结构、部门结构等地方。 还有可以应用在树形结构的地方。
 }

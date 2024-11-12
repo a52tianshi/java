@@ -17,4 +17,14 @@ public abstract class Entry {
     public String toString() {
         return getName() + " (" + getSize() + ")";
     }
+
+    //cq added
+    protected Entry parent;
+    public String getFullPathName() {
+        if (parent == null) {
+            return "/" + getName();
+        } else {
+            return parent.getFullPathName() + "/" + getName();
+        }
+    }
 }
