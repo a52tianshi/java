@@ -3,6 +3,26 @@ package design_pattern.chapter_13_visitor;
 public class Main {
     public static void main(String[] args) {
         try {
+            Directory root1 = new Directory("root1");
+            root1.add(new File("diary.html", 100));
+            root1.add(new File("index.html", 200));
+
+            Directory root2 = new Directory("root2");
+            root2.add(new File("diary.html", 100));
+            root2.add(new File("index.html", 200));
+
+            ElementArrayList list = new ElementArrayList();
+            list.add(root1);
+            list.add(root2);
+            list.add(new File("etc.html", 123));
+            list.accept(new ListVisitor());
+
+            return;
+        }catch (FileTreatmentException e) {
+            e.printStackTrace();
+        }
+
+        try {
             System.out.println("Making root entries...");
             Directory rootdir = new Directory("root");
             Directory bindir = new Directory("bin");
