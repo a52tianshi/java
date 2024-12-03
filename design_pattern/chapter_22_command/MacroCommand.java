@@ -3,11 +3,11 @@ package design_pattern.chapter_22_command;
 import java.util.Stack;
 
 public class MacroCommand implements Command {
-    private Stack commands = new Stack();
+    private Stack<Command> commands = new Stack();
 
     public void execute() {
-        for (Object command : commands) {
-            ((Command) command).execute();
+        for (Command command : commands) {
+            command.execute();
         }
     }
 
